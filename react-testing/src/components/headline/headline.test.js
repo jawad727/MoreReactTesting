@@ -16,7 +16,7 @@ describe("Headline Component", () => {
     describe("Checking PropTypes", () => {
 
         it("Should not throw a warning", () => {
-            const expectedProps = {
+            const expectedProps = { // Here we create an object that will replicate the value types of our props
                 header: "Test",
                 desc: "Test Desc",
                 tempArr: [{
