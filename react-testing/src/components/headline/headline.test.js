@@ -3,11 +3,8 @@ import { shallow } from "enzyme";
 import Headline from "./headline.js"
 import checkPropTypes from "check-prop-types"
 import PropTypes from "prop-types";
+import {findByTestAtt, checkProps} from "../reusables/resuableFunctions.js"
 
-const findByTestAtt = (component, attr) => { // finds element based on its data-test attribute
-    const wrapper = component.find(`[data-test='${attr}']`)
-    return wrapper
-}
 
 const setUp = (props={}) => {
     const component = shallow(<Headline {...props} />)
@@ -30,7 +27,7 @@ describe("Headline Component", () => {
                     onlineStatus: false
                 }]
             }
-            const propsErr = checkPropTypes(Headline.propTypes, expectedProps, 'props', Headline.name);
+            const propsErr = checkProps(Headline.propTypes, expectedProps); //imported from reusables
             expect(propsErr).toBeUndefined();
 
         })
