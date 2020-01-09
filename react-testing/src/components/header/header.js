@@ -1,6 +1,7 @@
 import React from "react";
 import './styles.scss';
 
+
 const Header = (props) => {
     return (
         <header data-test="headerComponent" >
@@ -14,5 +15,8 @@ const Header = (props) => {
         </header>
     )
 }
+
+
+
 
 export default Header
