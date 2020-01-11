@@ -8,7 +8,7 @@ describe("Posts reducer", () => {
         expect(newState).toEqual([])
     })
 
-    it("Should return new sate if receiving type", () => {
+    it("Should return new state if receiving type", () => {
 
         const posts = [{title: "Test 1"}, {title: "Test 2"}, {title: "Test 3"}]
         const newState = postsReducer(undefined, {
