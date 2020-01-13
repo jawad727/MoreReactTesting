@@ -3,4 +3,14 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
+body section {
+  margin-left: 30px;
+}
+
+body section button {
+  background: white;
+  border: 1px solid black;
+  padding: 5px 20px;
+}
 /*# sourceMappingURL=app.css.map */

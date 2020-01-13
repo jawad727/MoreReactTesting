@@ -2,4 +2,14 @@ body {
     background: lightgrey;
     margin: 0px;
     padding: 0px;
+
+    section {
+        margin-left: 30px;
+
+        button {
+            background: white;
+            border: 1px solid black;
+            padding: 5px 20px;
+        }
+    }
 }
