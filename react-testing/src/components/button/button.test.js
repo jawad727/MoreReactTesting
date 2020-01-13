@@ -11,9 +11,9 @@ describe("SharedButton Component", () => {
             const expectedProps = {
                 buttonText: "Example Button Text",
                 emitEvent: () => {
+
                 }
             }
-
             const propsError = checkProps(SharedButton, expectedProps);
             expect(propsError).toBeUndefined();
         })
@@ -21,6 +21,7 @@ describe("SharedButton Component", () => {
     })
 
     describe("Renders", () => {
+        let wrapper;
         beforeEach(() => {
             const props = {
                 buttonText: "Example Button Text",
@@ -28,8 +29,9 @@ describe("SharedButton Component", () => {
 
                 }
             }
+            wrapper = shallow(<SharedButton {...props} />)
         })
-        wrapper = shallow(<SharedButton {...props} />)
+        
 
         it("Should render a button", () => {
             const button = findByTestAtt(wrapper, "buttonComponent")
